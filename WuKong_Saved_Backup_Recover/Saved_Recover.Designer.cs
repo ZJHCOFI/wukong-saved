@@ -37,6 +37,7 @@
             this.label_info_User = new System.Windows.Forms.Label();
             this.label_Explanation = new System.Windows.Forms.Label();
             this.groupBox_SavedPath = new System.Windows.Forms.GroupBox();
+            this.button_del = new System.Windows.Forms.Button();
             this.groupBox_SavedPath.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             // button_ok
             // 
             this.button_ok.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_ok.Location = new System.Drawing.Point(132, 393);
+            this.button_ok.Location = new System.Drawing.Point(54, 393);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(136, 32);
             this.button_ok.TabIndex = 1;
@@ -108,11 +109,11 @@
             // 
             this.label_Explanation.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.label_Explanation.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_Explanation.Location = new System.Drawing.Point(39, 45);
+            this.label_Explanation.Location = new System.Drawing.Point(39, 47);
             this.label_Explanation.Name = "label_Explanation";
             this.label_Explanation.Size = new System.Drawing.Size(319, 37);
             this.label_Explanation.TabIndex = 12;
-            this.label_Explanation.Text = "存档还原说明：将还原【所选中的存档】【最后一次上香】或【最后一次游戏自动保存】时的进度";
+            this.label_Explanation.Text = "存档还原说明：还原的是【所选中的存档】里【最后一次上香】或【最后一次游戏自动保存】时的进度";
             // 
             // groupBox_SavedPath
             // 
@@ -126,12 +127,25 @@
             this.groupBox_SavedPath.TabIndex = 13;
             this.groupBox_SavedPath.TabStop = false;
             // 
+            // button_del
+            // 
+            this.button_del.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_del.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_del.Location = new System.Drawing.Point(207, 393);
+            this.button_del.Name = "button_del";
+            this.button_del.Size = new System.Drawing.Size(136, 32);
+            this.button_del.TabIndex = 2;
+            this.button_del.Text = "删除(Delete)";
+            this.button_del.UseVisualStyleBackColor = true;
+            this.button_del.Click += new System.EventHandler(this.button_del_Click);
+            // 
             // Saved_Recover
             // 
             this.AcceptButton = this.button_ok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 438);
+            this.Controls.Add(this.button_del);
             this.Controls.Add(this.groupBox_SavedPath);
             this.Controls.Add(this.label_Explanation);
             this.Controls.Add(this.button_ok);
@@ -162,5 +176,6 @@
         private System.Windows.Forms.Label label_info_User;
         private System.Windows.Forms.Label label_Explanation;
         private System.Windows.Forms.GroupBox groupBox_SavedPath;
+        private System.Windows.Forms.Button button_del;
     }
 }

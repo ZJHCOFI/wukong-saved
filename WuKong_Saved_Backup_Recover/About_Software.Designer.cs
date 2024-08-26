@@ -49,6 +49,7 @@
             this.richTextBox_about.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.richTextBox_about.Location = new System.Drawing.Point(24, 48);
             this.richTextBox_about.Name = "richTextBox_about";
+            this.richTextBox_about.ReadOnly = true;
             this.richTextBox_about.Size = new System.Drawing.Size(438, 323);
             this.richTextBox_about.TabIndex = 3;
             this.richTextBox_about.Text = resources.GetString("richTextBox_about.Text");

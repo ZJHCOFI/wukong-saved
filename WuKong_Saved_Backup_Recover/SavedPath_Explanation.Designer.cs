@@ -49,6 +49,7 @@
             this.richTextBox_SavePathExplanation.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.richTextBox_SavePathExplanation.Location = new System.Drawing.Point(24, 48);
             this.richTextBox_SavePathExplanation.Name = "richTextBox_SavePathExplanation";
+            this.richTextBox_SavePathExplanation.ReadOnly = true;
             this.richTextBox_SavePathExplanation.Size = new System.Drawing.Size(438, 212);
             this.richTextBox_SavePathExplanation.TabIndex = 3;
             this.richTextBox_SavePathExplanation.Text = resources.GetString("richTextBox_SavePathExplanation.Text");

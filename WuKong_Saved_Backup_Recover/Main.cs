@@ -13,7 +13,7 @@ namespace WuKong_Saved_Backup_Recover
     public partial class Main : Form
     {
         // 编写时间：2024.08.25
-        // 更新时间：2024.08.25 10:00
+        // 更新时间：2024.08.26 21:00
         // Edit by ZJHCOFI
         // 博客Blog：https://zjhcofi.com
         // Github：https://github.com/zjhcofi
@@ -24,6 +24,9 @@ namespace WuKong_Saved_Backup_Recover
         // =====更新日志=====
         // 2024.08.25 10:00
         // 第一个版本发布
+        // 2024.08.26 21:00
+        // 1、优化了界面
+        // 2、新增了删除存档备份的功能
         // ==================
 
         public Main()
@@ -42,8 +45,8 @@ namespace WuKong_Saved_Backup_Recover
         private bool bool_Moving = false;
         private Point oldMousePosition;
 
-        //判断软件配置文件是否存在
-        private bool bool_ConfigStatus = false;
+        //判断变量声明
+        private bool bool_ConfigStatus = false; //配置文件或游戏存档路径状态
 
         //键盘监听变量声明
         private IKeyboardMouseEvents m_GlobalHook;
@@ -195,7 +198,7 @@ namespace WuKong_Saved_Backup_Recover
                     }
                     textBox_SBR_Default_SavePath.Clear();
                     textBox_SBR_Default_SavePath.Focus();
-                    MessageBox.Show("游戏存档路径有误，请重新在工具左下角填写并点击\"应用\"\nThe game save path is incorrect,please fill it out again \nin the bottom left corner of the tool and click \"APPLY\"", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("游戏存档路径有误，请重新\"选择路径\"\nThe game save path is incorrect,please \"Choose Path\" again", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -406,7 +409,7 @@ namespace WuKong_Saved_Backup_Recover
                 checkedListBox_SBR_Default_SaveUser.Items.Clear();
                 textBox_SBR_Default_SavePath.Clear();
                 textBox_SBR_Default_SavePath.Focus();
-                MessageBox.Show("游戏存档识别失败，请在工具左下角重新\"选择路径\"\nGame save recognition fail,please \"Choose Path\" again \nin the bottom left corner of the tool", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("游戏存档识别失败，请重新\"选择路径\"\nGame save recognition fail,please \"Choose Path\" again", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -447,7 +450,7 @@ namespace WuKong_Saved_Backup_Recover
                 checkedListBox_SBR_Default_SaveUser.Items.Clear();
                 textBox_SBR_Default_SavePath.Clear();
                 textBox_SBR_Default_SavePath.Focus();
-                MessageBox.Show("游戏存档识别失败，请在工具左下角重新\"选择路径\"\nGame save recognition fail,please \"Choose Path\" again \nin the bottom left corner of the tool", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("游戏存档识别失败，请重新\"选择路径\"\nGame save recognition fail,please \"Choose Path\" again", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -610,7 +613,7 @@ namespace WuKong_Saved_Backup_Recover
                     label_SBR_Default_info.Text = "          工具配置文件缺失或错误，请选择存档路径";
                     label_SBR_Default_SavePath.Text = "游戏存档路径：";
                     label_SBR_Default_SaveUser.Text = "需要备份或还原存档的用户（请勾选）：";
-                    linkLabel_SBR_Default_SavePath.Text = "点击此处查看游戏路径说明";
+                    linkLabel_SBR_Default_SavePath.Text = "点击此处查看游戏存档路径说明";
                     toolTip_info.SetToolTip(pictureBox_Btn_Quit, "退出");
                     toolTip_info.SetToolTip(pictureBox_Btn_Minimized, "最小化");
                     label_info_SavedBackup.Font = new Font("微软雅黑", 36F, FontStyle.Bold, GraphicsUnit.Point);
@@ -630,7 +633,7 @@ namespace WuKong_Saved_Backup_Recover
                     label_SBR_list_F12_Info.Text = "还原存档";
                     //工具信息文字变化
                     label_SBR_creditor.Text = "作者：ZJHCOFI | zjhcofi.com";
-                    label_SBR_version.Text = "工具版本：Build.2024.08.25";
+                    label_SBR_version.Text = "工具版本：Build.2024.08.26";
                     break;
                 case "繁體":
                     //控件变化
@@ -657,7 +660,7 @@ namespace WuKong_Saved_Backup_Recover
                     label_SBR_Default_info.Text = "          工具配置文件缺失或錯誤，請選擇存檔路徑";
                     label_SBR_Default_SavePath.Text = "遊戲存檔路徑：";
                     label_SBR_Default_SaveUser.Text = "需要備份或還原存檔的用戶（請勾選）：";
-                    linkLabel_SBR_Default_SavePath.Text = "點擊此處查看遊戲路徑說明";
+                    linkLabel_SBR_Default_SavePath.Text = "點擊此處查看遊戲存檔路徑說明";
                     toolTip_info.SetToolTip(pictureBox_Btn_Quit, "關閉");
                     toolTip_info.SetToolTip(pictureBox_Btn_Minimized, "最小化");
                     label_info_SavedBackup.Font = new Font("微软雅黑", 36F, FontStyle.Bold, GraphicsUnit.Point);
@@ -677,7 +680,7 @@ namespace WuKong_Saved_Backup_Recover
                     label_SBR_list_F12_Info.Text = "還原存檔";
                     //工具信息文字变化
                     label_SBR_creditor.Text = "作者：ZJHCOFI | zjhcofi.com";
-                    label_SBR_version.Text = "軟體版本：Build.2024.08.25";
+                    label_SBR_version.Text = "軟體版本：Build.2024.08.26";
                     break;
                 case "English":
                     //控件变化
@@ -724,7 +727,7 @@ namespace WuKong_Saved_Backup_Recover
                     label_SBR_list_F12_Info.Text = "Saved Recover";
                     //工具信息文字变化
                     label_SBR_creditor.Text = "Credit: ZJHCOFI | zjhcofi.com";
-                    label_SBR_version.Text = "Software Version: Build.2024.08.25";
+                    label_SBR_version.Text = "Software Version: Build.2024.08.26";
                     break;
                 default:
                     break;

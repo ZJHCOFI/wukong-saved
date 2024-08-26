@@ -70,12 +70,17 @@ namespace WuKong_Saved_Backup_Recover
         //事件：选中了存档
         private void listBox_SavedRecover_SelectedValueChanged(object sender, EventArgs e)
         {
-            label_User.Text = "";
-            string str_SBRSavedPath = Path.Combine(GlobalValue.str_GlobalSavedPath, "SBR_SaveGamesBackup" + "\\" + listBox_SavedRecover.SelectedItem.ToString());
-            string[] str_GameUsers = Directory.GetDirectories(str_SBRSavedPath);
-            for (int i = 0; i < str_GameUsers.Length; i++)
+            //检查是否选中存档
+            if (listBox_SavedRecover.SelectedIndex != -1)
             {
-                label_User.Text += str_GameUsers[i].Replace(str_SBRSavedPath + "\\", "") + "，";
+                label_User.Text = "";
+                string str_SBRSavedPath = Path.Combine(GlobalValue.str_GlobalSavedPath, "SBR_SaveGamesBackup");
+                string str_SBRSavedPathSaved = str_SBRSavedPath + "\\" + listBox_SavedRecover.SelectedItem.ToString();
+                string[] str_GameUsers = Directory.GetDirectories(str_SBRSavedPathSaved);
+                for (int i = 0; i < str_GameUsers.Length; i++)
+                {
+                    label_User.Text += str_GameUsers[i].Replace(str_SBRSavedPathSaved + "\\", "") + "，";
+                }
             }
         }
 
@@ -99,7 +104,7 @@ namespace WuKong_Saved_Backup_Recover
                     {
                         //提醒将游戏退出到标题页面
                         DialogResult MsgBoxResult;
-                        MsgBoxResult = MessageBox.Show("请确认已经将游戏【退出到标题页面】，最新存档将被替换，是否继续？\nPlease confirm that the game has been Return to Title Screen \nand the latest save will be replaced.Do you want to continue?", "提示 Info", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        MsgBoxResult = MessageBox.Show("请确认已经将游戏【退出到标题页面】，最新存档将被替换成：\n[" + listBox_SavedRecover.SelectedItem.ToString() + "]\n是否继续？\n\nPlease confirm that the game has been Return to Title Screen \nand the latest save will be replaced:\n[" + listBox_SavedRecover.SelectedItem.ToString() + "]\nDo you want to continue?", "提示 Info", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                         if (MsgBoxResult == DialogResult.Yes)
                         {
                             //删除游戏原存档文件
@@ -121,7 +126,57 @@ namespace WuKong_Saved_Backup_Recover
                         MessageBox.Show("此存档不涉及该用户： " + GlobalValue.str_GlobalUserName[i] + "\nThis archive does not involve this users: " + GlobalValue.str_GlobalUserName[i], "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                Close();
             } 
+        }
+
+        //事件：点击“删除”按钮
+        private void button_del_Click(object sender, EventArgs e)
+        {
+            //检查是否选中存档
+            if (listBox_SavedRecover.SelectedIndex == -1)
+            {
+                MessageBox.Show("请选择一个存档！\nPlease choose an saved!", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string str_SBRSavedPath = Path.Combine(GlobalValue.str_GlobalSavedPath, "SBR_SaveGamesBackup");
+                string str_DelSBRSavedPath = str_SBRSavedPath + "\\" + listBox_SavedRecover.SelectedItem.ToString();
+                if (Directory.Exists(str_DelSBRSavedPath)) //如果存档文件夹正确
+                {
+                    //提醒删除工具备份的存档
+                    DialogResult MsgBoxResult;
+                    MsgBoxResult = MessageBox.Show("是否删除存档：" + listBox_SavedRecover.SelectedItem.ToString() + " ？\nPlease confirm whether to delete the saved: " + listBox_SavedRecover.SelectedItem.ToString() + " ?", "提示 Info", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (MsgBoxResult == DialogResult.Yes)
+                    {
+                        //删除所选中的工具备份的存档
+                        DirectoryInfo DeleteFile = new DirectoryInfo(str_DelSBRSavedPath);
+                        DeleteFile.Delete(true);
+                        if (!Directory.Exists(str_DelSBRSavedPath))
+                        {
+                            //更新listbox中的内容
+                            listBox_SavedRecover.Items.Clear();
+                            if (Directory.Exists(str_SBRSavedPath)) //如果工具存档文件夹正确
+                            {
+                                string[] str_SBRSaved = Directory.GetDirectories(str_SBRSavedPath);
+                                for (int i = 0; i < str_SBRSaved.Length; i++)
+                                {
+                                    listBox_SavedRecover.Items.Add(str_SBRSaved[i].Replace(str_SBRSavedPath + "\\", ""));
+                                }
+                            }
+                            MessageBox.Show("所选中的存档删除成功！\nThe selected saved has been successfully deleted!", "提示 Info", MessageBoxButtons.OK, MessageBoxIcon.Information);  
+                        }
+                        else 
+                        {
+                            MessageBox.Show("存档删除失败！\nSaved deletion failed!", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }   
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("此存档不存在！\nThis saved does not exist!", "错误 ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

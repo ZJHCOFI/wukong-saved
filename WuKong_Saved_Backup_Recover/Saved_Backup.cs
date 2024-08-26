@@ -72,6 +72,7 @@ namespace WuKong_Saved_Backup_Recover
                 string str_destFolder = str_SBRSavedPath + "\\" + label_SavedName.Text.ToString() + "\\" + GlobalValue.str_GlobalUserName[i];
                 CopyFolder(str_sourceFolder, str_destFolder);
             }
+            Close();
         }
 
         //事件：textBox文字变化

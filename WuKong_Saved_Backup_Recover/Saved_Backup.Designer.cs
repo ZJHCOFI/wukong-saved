@@ -38,6 +38,7 @@
             this.label_info_User = new System.Windows.Forms.Label();
             this.label_User = new System.Windows.Forms.Label();
             this.groupBox_SavedBackup = new System.Windows.Forms.GroupBox();
+            this.label_Explanation = new System.Windows.Forms.Label();
             this.groupBox_SavedBackup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             // button_ok
             // 
             this.button_ok.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_ok.Location = new System.Drawing.Point(136, 260);
+            this.button_ok.Location = new System.Drawing.Point(136, 306);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(132, 32);
             this.button_ok.TabIndex = 1;
@@ -128,18 +129,29 @@
             this.groupBox_SavedBackup.Controls.Add(this.label_info_User);
             this.groupBox_SavedBackup.Controls.Add(this.textBox_keyword);
             this.groupBox_SavedBackup.Controls.Add(this.label_SavedName);
-            this.groupBox_SavedBackup.Location = new System.Drawing.Point(21, 46);
+            this.groupBox_SavedBackup.Location = new System.Drawing.Point(21, 92);
             this.groupBox_SavedBackup.Name = "groupBox_SavedBackup";
             this.groupBox_SavedBackup.Size = new System.Drawing.Size(360, 199);
             this.groupBox_SavedBackup.TabIndex = 10;
             this.groupBox_SavedBackup.TabStop = false;
+            // 
+            // label_Explanation
+            // 
+            this.label_Explanation.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.label_Explanation.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label_Explanation.Location = new System.Drawing.Point(40, 53);
+            this.label_Explanation.Name = "label_Explanation";
+            this.label_Explanation.Size = new System.Drawing.Size(319, 37);
+            this.label_Explanation.TabIndex = 13;
+            this.label_Explanation.Text = "存档备份说明：备份的是【当前进度】中【最后一次上香】或【最后一次游戏自动保存】时的存档";
             // 
             // Saved_Backup
             // 
             this.AcceptButton = this.button_ok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 305);
+            this.ClientSize = new System.Drawing.Size(404, 350);
+            this.Controls.Add(this.label_Explanation);
             this.Controls.Add(this.groupBox_SavedBackup);
             this.Controls.Add(this.button_ok);
             this.Controls.Add(this.label_title);
@@ -170,5 +182,6 @@
         private System.Windows.Forms.Label label_info_User;
         private System.Windows.Forms.Label label_User;
         private System.Windows.Forms.GroupBox groupBox_SavedBackup;
+        private System.Windows.Forms.Label label_Explanation;
     }
 }

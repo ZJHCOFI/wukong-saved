@@ -34,6 +34,8 @@
             this.radioButton_en = new System.Windows.Forms.RadioButton();
             this.radioButton_tc = new System.Windows.Forms.RadioButton();
             this.radioButton_cn = new System.Windows.Forms.RadioButton();
+            this.pictureBox_Btn_Minimized = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Btn_Quit = new System.Windows.Forms.PictureBox();
             this.toolTip_info = new System.Windows.Forms.ToolTip(this.components);
             this.label_info_SavedBackup = new System.Windows.Forms.Label();
             this.label_info_WuKongWebsite = new System.Windows.Forms.Label();
@@ -61,16 +63,14 @@
             this.pictureBox_WuKong_HeiShenHua = new System.Windows.Forms.PictureBox();
             this.pictureBox_SBR_Logo = new System.Windows.Forms.PictureBox();
             this.pictureBox_WuKong_Text = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Btn_Minimized = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Btn_Quit = new System.Windows.Forms.PictureBox();
             this.pictureBox_WuKong_Monkey = new System.Windows.Forms.PictureBox();
             this.pictureBox_WuKong_bg = new System.Windows.Forms.PictureBox();
             this.panel_head.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Minimized)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Quit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_HeiShenHua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_SBR_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_Text)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Minimized)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Quit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_Monkey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_bg)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +131,30 @@
             this.radioButton_cn.UseVisualStyleBackColor = true;
             this.radioButton_cn.CheckedChanged += new System.EventHandler(this.radioBtn_CheckedChange);
             // 
+            // pictureBox_Btn_Minimized
+            // 
+            this.pictureBox_Btn_Minimized.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Btn_Minimized.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.minimized_btn;
+            this.pictureBox_Btn_Minimized.Location = new System.Drawing.Point(677, 22);
+            this.pictureBox_Btn_Minimized.Name = "pictureBox_Btn_Minimized";
+            this.pictureBox_Btn_Minimized.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox_Btn_Minimized.TabIndex = 1;
+            this.pictureBox_Btn_Minimized.TabStop = false;
+            this.pictureBox_Btn_Minimized.Click += new System.EventHandler(this.pictrueBox_Click);
+            this.pictureBox_Btn_Minimized.MouseLeave += new System.EventHandler(this.pictrueBox_MouseLeave);
+            // 
+            // pictureBox_Btn_Quit
+            // 
+            this.pictureBox_Btn_Quit.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Btn_Quit.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.quit_btn;
+            this.pictureBox_Btn_Quit.Location = new System.Drawing.Point(716, 22);
+            this.pictureBox_Btn_Quit.Name = "pictureBox_Btn_Quit";
+            this.pictureBox_Btn_Quit.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox_Btn_Quit.TabIndex = 0;
+            this.pictureBox_Btn_Quit.TabStop = false;
+            this.pictureBox_Btn_Quit.Click += new System.EventHandler(this.pictrueBox_Click);
+            this.pictureBox_Btn_Quit.MouseLeave += new System.EventHandler(this.pictrueBox_MouseLeave);
+            // 
             // label_info_SavedBackup
             // 
             this.label_info_SavedBackup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -139,7 +163,7 @@
             this.label_info_SavedBackup.BackColor = System.Drawing.Color.Transparent;
             this.label_info_SavedBackup.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_info_SavedBackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_info_SavedBackup.Location = new System.Drawing.Point(484, 470);
+            this.label_info_SavedBackup.Location = new System.Drawing.Point(484, 480);
             this.label_info_SavedBackup.Name = "label_info_SavedBackup";
             this.label_info_SavedBackup.Size = new System.Drawing.Size(219, 64);
             this.label_info_SavedBackup.TabIndex = 4;
@@ -155,7 +179,7 @@
             this.label_info_WuKongWebsite.BackColor = System.Drawing.Color.Transparent;
             this.label_info_WuKongWebsite.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_info_WuKongWebsite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_info_WuKongWebsite.Location = new System.Drawing.Point(484, 470);
+            this.label_info_WuKongWebsite.Location = new System.Drawing.Point(484, 480);
             this.label_info_WuKongWebsite.Name = "label_info_WuKongWebsite";
             this.label_info_WuKongWebsite.Size = new System.Drawing.Size(219, 64);
             this.label_info_WuKongWebsite.TabIndex = 6;
@@ -169,7 +193,7 @@
             this.label_SBR_title_GameName.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_title_GameName.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold);
             this.label_SBR_title_GameName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_SBR_title_GameName.Location = new System.Drawing.Point(194, 92);
+            this.label_SBR_title_GameName.Location = new System.Drawing.Point(194, 85);
             this.label_SBR_title_GameName.Name = "label_SBR_title_GameName";
             this.label_SBR_title_GameName.Size = new System.Drawing.Size(172, 27);
             this.label_SBR_title_GameName.TabIndex = 8;
@@ -181,7 +205,7 @@
             this.label_SBR_title_SBRName.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_title_SBRName.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold);
             this.label_SBR_title_SBRName.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_title_SBRName.Location = new System.Drawing.Point(173, 124);
+            this.label_SBR_title_SBRName.Location = new System.Drawing.Point(173, 117);
             this.label_SBR_title_SBRName.Name = "label_SBR_title_SBRName";
             this.label_SBR_title_SBRName.Size = new System.Drawing.Size(221, 26);
             this.label_SBR_title_SBRName.TabIndex = 9;
@@ -195,7 +219,7 @@
             this.label_info_SBR.BackColor = System.Drawing.Color.Transparent;
             this.label_info_SBR.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_info_SBR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_info_SBR.Location = new System.Drawing.Point(484, 470);
+            this.label_info_SBR.Location = new System.Drawing.Point(484, 480);
             this.label_info_SBR.Name = "label_info_SBR";
             this.label_info_SBR.Size = new System.Drawing.Size(219, 64);
             this.label_info_SBR.TabIndex = 10;
@@ -207,7 +231,7 @@
             // 
             this.label_SplitLine_1.BackColor = System.Drawing.Color.Transparent;
             this.label_SplitLine_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label_SplitLine_1.Location = new System.Drawing.Point(38, 378);
+            this.label_SplitLine_1.Location = new System.Drawing.Point(38, 372);
             this.label_SplitLine_1.Name = "label_SplitLine_1";
             this.label_SplitLine_1.Size = new System.Drawing.Size(380, 2);
             this.label_SplitLine_1.TabIndex = 11;
@@ -218,7 +242,7 @@
             this.label_SBR_list_KuaiJieJian.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_list_KuaiJieJian.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_list_KuaiJieJian.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_list_KuaiJieJian.Location = new System.Drawing.Point(37, 356);
+            this.label_SBR_list_KuaiJieJian.Location = new System.Drawing.Point(37, 350);
             this.label_SBR_list_KuaiJieJian.Name = "label_SBR_list_KuaiJieJian";
             this.label_SBR_list_KuaiJieJian.Size = new System.Drawing.Size(54, 19);
             this.label_SBR_list_KuaiJieJian.TabIndex = 12;
@@ -230,7 +254,7 @@
             this.label_SBR_list_GongNengLieBiao.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_list_GongNengLieBiao.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_list_GongNengLieBiao.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_list_GongNengLieBiao.Location = new System.Drawing.Point(216, 356);
+            this.label_SBR_list_GongNengLieBiao.Location = new System.Drawing.Point(216, 350);
             this.label_SBR_list_GongNengLieBiao.Name = "label_SBR_list_GongNengLieBiao";
             this.label_SBR_list_GongNengLieBiao.Size = new System.Drawing.Size(69, 19);
             this.label_SBR_list_GongNengLieBiao.TabIndex = 13;
@@ -242,7 +266,7 @@
             this.label_SBR_list_F11.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_list_F11.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_list_F11.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_list_F11.Location = new System.Drawing.Point(37, 388);
+            this.label_SBR_list_F11.Location = new System.Drawing.Point(37, 382);
             this.label_SBR_list_F11.Name = "label_SBR_list_F11";
             this.label_SBR_list_F11.Size = new System.Drawing.Size(72, 19);
             this.label_SBR_list_F11.TabIndex = 14;
@@ -254,7 +278,7 @@
             this.label_SBR_list_F11_Info.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_list_F11_Info.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_list_F11_Info.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_list_F11_Info.Location = new System.Drawing.Point(216, 388);
+            this.label_SBR_list_F11_Info.Location = new System.Drawing.Point(216, 382);
             this.label_SBR_list_F11_Info.Name = "label_SBR_list_F11_Info";
             this.label_SBR_list_F11_Info.Size = new System.Drawing.Size(69, 19);
             this.label_SBR_list_F11_Info.TabIndex = 16;
@@ -284,7 +308,7 @@
             this.label_SBR_version.Name = "label_SBR_version";
             this.label_SBR_version.Size = new System.Drawing.Size(165, 17);
             this.label_SBR_version.TabIndex = 42;
-            this.label_SBR_version.Text = "工具版本：Build.2024.08.25";
+            this.label_SBR_version.Text = "工具版本：Build.2024.08.26";
             this.label_SBR_version.Click += new System.EventHandler(this.label_Click);
             this.label_SBR_version.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
@@ -294,7 +318,7 @@
             this.label_SBR_list_F12.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_list_F12.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_list_F12.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_list_F12.Location = new System.Drawing.Point(37, 415);
+            this.label_SBR_list_F12.Location = new System.Drawing.Point(37, 409);
             this.label_SBR_list_F12.Name = "label_SBR_list_F12";
             this.label_SBR_list_F12.Size = new System.Drawing.Size(72, 19);
             this.label_SBR_list_F12.TabIndex = 17;
@@ -306,7 +330,7 @@
             this.label_SBR_list_F12_Info.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_list_F12_Info.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_list_F12_Info.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_list_F12_Info.Location = new System.Drawing.Point(216, 415);
+            this.label_SBR_list_F12_Info.Location = new System.Drawing.Point(216, 409);
             this.label_SBR_list_F12_Info.Name = "label_SBR_list_F12_Info";
             this.label_SBR_list_F12_Info.Size = new System.Drawing.Size(69, 19);
             this.label_SBR_list_F12_Info.TabIndex = 19;
@@ -315,7 +339,7 @@
             // button_SBR_switch_F11
             // 
             this.button_SBR_switch_F11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_SBR_switch_F11.Location = new System.Drawing.Point(155, 385);
+            this.button_SBR_switch_F11.Location = new System.Drawing.Point(155, 379);
             this.button_SBR_switch_F11.Name = "button_SBR_switch_F11";
             this.button_SBR_switch_F11.Size = new System.Drawing.Size(59, 23);
             this.button_SBR_switch_F11.TabIndex = 1;
@@ -326,7 +350,7 @@
             // button_SBR_switch_F12
             // 
             this.button_SBR_switch_F12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_SBR_switch_F12.Location = new System.Drawing.Point(155, 412);
+            this.button_SBR_switch_F12.Location = new System.Drawing.Point(155, 406);
             this.button_SBR_switch_F12.Name = "button_SBR_switch_F12";
             this.button_SBR_switch_F12.Size = new System.Drawing.Size(59, 23);
             this.button_SBR_switch_F12.TabIndex = 2;
@@ -340,7 +364,7 @@
             this.label_SBR_Default_SavePath.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_Default_SavePath.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_Default_SavePath.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_Default_SavePath.Location = new System.Drawing.Point(26, 503);
+            this.label_SBR_Default_SavePath.Location = new System.Drawing.Point(26, 498);
             this.label_SBR_Default_SavePath.Name = "label_SBR_Default_SavePath";
             this.label_SBR_Default_SavePath.Size = new System.Drawing.Size(114, 19);
             this.label_SBR_Default_SavePath.TabIndex = 44;
@@ -348,22 +372,26 @@
             // 
             // textBox_SBR_Default_SavePath
             // 
-            this.textBox_SBR_Default_SavePath.Enabled = false;
+            this.textBox_SBR_Default_SavePath.BackColor = System.Drawing.SystemColors.Window;
             this.textBox_SBR_Default_SavePath.Font = new System.Drawing.Font("微软雅黑", 8F);
-            this.textBox_SBR_Default_SavePath.Location = new System.Drawing.Point(138, 504);
+            this.textBox_SBR_Default_SavePath.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox_SBR_Default_SavePath.Location = new System.Drawing.Point(138, 499);
             this.textBox_SBR_Default_SavePath.Multiline = true;
             this.textBox_SBR_Default_SavePath.Name = "textBox_SBR_Default_SavePath";
+            this.textBox_SBR_Default_SavePath.ReadOnly = true;
             this.textBox_SBR_Default_SavePath.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_SBR_Default_SavePath.Size = new System.Drawing.Size(235, 43);
             this.textBox_SBR_Default_SavePath.TabIndex = 3;
             // 
             // checkedListBox_SBR_Default_SaveUser
             // 
+            this.checkedListBox_SBR_Default_SaveUser.BackColor = System.Drawing.SystemColors.Window;
             this.checkedListBox_SBR_Default_SaveUser.CheckOnClick = true;
             this.checkedListBox_SBR_Default_SaveUser.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkedListBox_SBR_Default_SaveUser.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkedListBox_SBR_Default_SaveUser.FormattingEnabled = true;
             this.checkedListBox_SBR_Default_SaveUser.HorizontalScrollbar = true;
-            this.checkedListBox_SBR_Default_SaveUser.Location = new System.Drawing.Point(138, 556);
+            this.checkedListBox_SBR_Default_SaveUser.Location = new System.Drawing.Point(138, 555);
             this.checkedListBox_SBR_Default_SaveUser.Name = "checkedListBox_SBR_Default_SaveUser";
             this.checkedListBox_SBR_Default_SaveUser.Size = new System.Drawing.Size(288, 72);
             this.checkedListBox_SBR_Default_SaveUser.TabIndex = 5;
@@ -374,7 +402,7 @@
             this.label_SBR_Default_SaveUser.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_Default_SaveUser.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_Default_SaveUser.ForeColor = System.Drawing.Color.White;
-            this.label_SBR_Default_SaveUser.Location = new System.Drawing.Point(26, 557);
+            this.label_SBR_Default_SaveUser.Location = new System.Drawing.Point(26, 559);
             this.label_SBR_Default_SaveUser.Name = "label_SBR_Default_SaveUser";
             this.label_SBR_Default_SaveUser.Size = new System.Drawing.Size(106, 71);
             this.label_SBR_Default_SaveUser.TabIndex = 46;
@@ -385,7 +413,7 @@
             this.label_SBR_Default_info.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_Default_info.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.label_SBR_Default_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_SBR_Default_info.Location = new System.Drawing.Point(26, 480);
+            this.label_SBR_Default_info.Location = new System.Drawing.Point(26, 469);
             this.label_SBR_Default_info.Name = "label_SBR_Default_info";
             this.label_SBR_Default_info.Size = new System.Drawing.Size(400, 25);
             this.label_SBR_Default_info.TabIndex = 47;
@@ -395,7 +423,7 @@
             // button_SBR_Default_SavePath
             // 
             this.button_SBR_Default_SavePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_SBR_Default_SavePath.Location = new System.Drawing.Point(379, 504);
+            this.button_SBR_Default_SavePath.Location = new System.Drawing.Point(379, 499);
             this.button_SBR_Default_SavePath.Name = "button_SBR_Default_SavePath";
             this.button_SBR_Default_SavePath.Size = new System.Drawing.Size(47, 43);
             this.button_SBR_Default_SavePath.TabIndex = 4;
@@ -408,12 +436,12 @@
             this.linkLabel_SBR_Default_SavePath.ActiveLinkColor = System.Drawing.Color.Red;
             this.linkLabel_SBR_Default_SavePath.Font = new System.Drawing.Font("微软雅黑", 8F);
             this.linkLabel_SBR_Default_SavePath.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel_SBR_Default_SavePath.Location = new System.Drawing.Point(27, 521);
+            this.linkLabel_SBR_Default_SavePath.Location = new System.Drawing.Point(27, 517);
             this.linkLabel_SBR_Default_SavePath.Name = "linkLabel_SBR_Default_SavePath";
             this.linkLabel_SBR_Default_SavePath.Size = new System.Drawing.Size(97, 40);
             this.linkLabel_SBR_Default_SavePath.TabIndex = 48;
             this.linkLabel_SBR_Default_SavePath.TabStop = true;
-            this.linkLabel_SBR_Default_SavePath.Text = "点击此处查看游戏路径说明";
+            this.linkLabel_SBR_Default_SavePath.Text = "点击此处查看游戏存档路径说明";
             this.linkLabel_SBR_Default_SavePath.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.linkLabel_SBR_Default_SavePath.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_SBR_Default_SavePath_LinkClicked);
             // 
@@ -431,7 +459,7 @@
             // 
             this.pictureBox_SBR_Logo.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_SBR_Logo.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.logo_2;
-            this.pictureBox_SBR_Logo.Location = new System.Drawing.Point(69, 73);
+            this.pictureBox_SBR_Logo.Location = new System.Drawing.Point(69, 66);
             this.pictureBox_SBR_Logo.Name = "pictureBox_SBR_Logo";
             this.pictureBox_SBR_Logo.Size = new System.Drawing.Size(100, 100);
             this.pictureBox_SBR_Logo.TabIndex = 7;
@@ -443,7 +471,7 @@
             // 
             this.pictureBox_WuKong_Text.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_WuKong_Text.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.wukong_title;
-            this.pictureBox_WuKong_Text.Location = new System.Drawing.Point(95, 180);
+            this.pictureBox_WuKong_Text.Location = new System.Drawing.Point(95, 173);
             this.pictureBox_WuKong_Text.Name = "pictureBox_WuKong_Text";
             this.pictureBox_WuKong_Text.Size = new System.Drawing.Size(260, 161);
             this.pictureBox_WuKong_Text.TabIndex = 5;
@@ -451,35 +479,11 @@
             this.pictureBox_WuKong_Text.Click += new System.EventHandler(this.pictrueBox_Click);
             this.pictureBox_WuKong_Text.MouseLeave += new System.EventHandler(this.pictrueBox_MouseLeave);
             // 
-            // pictureBox_Btn_Minimized
-            // 
-            this.pictureBox_Btn_Minimized.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Btn_Minimized.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.minimized_btn;
-            this.pictureBox_Btn_Minimized.Location = new System.Drawing.Point(677, 22);
-            this.pictureBox_Btn_Minimized.Name = "pictureBox_Btn_Minimized";
-            this.pictureBox_Btn_Minimized.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox_Btn_Minimized.TabIndex = 1;
-            this.pictureBox_Btn_Minimized.TabStop = false;
-            this.pictureBox_Btn_Minimized.Click += new System.EventHandler(this.pictrueBox_Click);
-            this.pictureBox_Btn_Minimized.MouseLeave += new System.EventHandler(this.pictrueBox_MouseLeave);
-            // 
-            // pictureBox_Btn_Quit
-            // 
-            this.pictureBox_Btn_Quit.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Btn_Quit.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.quit_btn;
-            this.pictureBox_Btn_Quit.Location = new System.Drawing.Point(716, 22);
-            this.pictureBox_Btn_Quit.Name = "pictureBox_Btn_Quit";
-            this.pictureBox_Btn_Quit.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox_Btn_Quit.TabIndex = 0;
-            this.pictureBox_Btn_Quit.TabStop = false;
-            this.pictureBox_Btn_Quit.Click += new System.EventHandler(this.pictrueBox_Click);
-            this.pictureBox_Btn_Quit.MouseLeave += new System.EventHandler(this.pictrueBox_MouseLeave);
-            // 
             // pictureBox_WuKong_Monkey
             // 
             this.pictureBox_WuKong_Monkey.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_WuKong_Monkey.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.wukong_monkey;
-            this.pictureBox_WuKong_Monkey.Location = new System.Drawing.Point(420, 67);
+            this.pictureBox_WuKong_Monkey.Location = new System.Drawing.Point(420, 60);
             this.pictureBox_WuKong_Monkey.Name = "pictureBox_WuKong_Monkey";
             this.pictureBox_WuKong_Monkey.Size = new System.Drawing.Size(325, 368);
             this.pictureBox_WuKong_Monkey.TabIndex = 1;
@@ -545,11 +549,11 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel_head.ResumeLayout(false);
             this.panel_head.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Minimized)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Quit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_HeiShenHua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_SBR_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_Text)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Minimized)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Btn_Quit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_Monkey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WuKong_bg)).EndInit();
             this.ResumeLayout(false);
