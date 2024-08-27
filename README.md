@@ -19,7 +19,7 @@
   
 1、主要功能：可对《黑神话:悟空》的游戏存档进行快速备份或还原操作，方便回档达成某些成就、重新打怪、获得错过的物品、拍游戏风景照片等。  
   
-2、存档还原说明：还原的是 **【所选中的存档】** 的 **【最后一次上香】** 或 **【最后一次游戏自动保存】** 时的进度（备份时同理）。  
+2、存档还原说明：还原的是 **【所选存档】** 的 **【最后一次上香】** 或 **【游戏最后一次自动保存】** 时的进度（备份时同理）。  
   
 3、注意事项：  
 1）下载和使用时请关闭杀毒软件  
@@ -28,7 +28,7 @@
   
 4、成品下载地址：  
 **【Releases v1.2】** [《黑神话：悟空》存档快速备份及还原工具(BLACK MYTH WUKONG Saved Backup and Recover Tool)](https://github.com/ZJHCOFI/wukong-saved/releases/tag/v1.2)  
-**【个人博客】** [《黑神话：悟空》存档快速备份及还原工具(BLACK MYTH WUKONG Saved Backup and Recover Tool)](https://www.zjhcofi.com/2024/08/25/wukong-saved/)  
+**【个人博客】** [《黑神话：悟空》存档快速备份及还原工具v1.2](https://www.zjhcofi.com/2024/08/25/wukong-saved/)  
   
 5、目录说明：  
 **【WuKong_Saved_Backup_Recover】** 《黑神话：悟空》存档快速备份及还原工具源代码  
