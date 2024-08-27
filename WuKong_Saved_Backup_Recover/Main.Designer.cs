@@ -163,7 +163,7 @@
             this.label_info_SavedBackup.BackColor = System.Drawing.Color.Transparent;
             this.label_info_SavedBackup.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_info_SavedBackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_info_SavedBackup.Location = new System.Drawing.Point(484, 480);
+            this.label_info_SavedBackup.Location = new System.Drawing.Point(494, 485);
             this.label_info_SavedBackup.Name = "label_info_SavedBackup";
             this.label_info_SavedBackup.Size = new System.Drawing.Size(219, 64);
             this.label_info_SavedBackup.TabIndex = 4;
@@ -179,7 +179,7 @@
             this.label_info_WuKongWebsite.BackColor = System.Drawing.Color.Transparent;
             this.label_info_WuKongWebsite.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_info_WuKongWebsite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_info_WuKongWebsite.Location = new System.Drawing.Point(484, 480);
+            this.label_info_WuKongWebsite.Location = new System.Drawing.Point(494, 485);
             this.label_info_WuKongWebsite.Name = "label_info_WuKongWebsite";
             this.label_info_WuKongWebsite.Size = new System.Drawing.Size(219, 64);
             this.label_info_WuKongWebsite.TabIndex = 6;
@@ -219,7 +219,7 @@
             this.label_info_SBR.BackColor = System.Drawing.Color.Transparent;
             this.label_info_SBR.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_info_SBR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label_info_SBR.Location = new System.Drawing.Point(484, 480);
+            this.label_info_SBR.Location = new System.Drawing.Point(494, 485);
             this.label_info_SBR.Name = "label_info_SBR";
             this.label_info_SBR.Size = new System.Drawing.Size(219, 64);
             this.label_info_SBR.TabIndex = 10;
@@ -290,7 +290,7 @@
             this.label_SBR_creditor.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_creditor.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.label_SBR_creditor.ForeColor = System.Drawing.Color.DarkGray;
-            this.label_SBR_creditor.Location = new System.Drawing.Point(502, 570);
+            this.label_SBR_creditor.Location = new System.Drawing.Point(512, 573);
             this.label_SBR_creditor.Name = "label_SBR_creditor";
             this.label_SBR_creditor.Size = new System.Drawing.Size(179, 17);
             this.label_SBR_creditor.TabIndex = 41;
@@ -304,11 +304,11 @@
             this.label_SBR_version.BackColor = System.Drawing.Color.Transparent;
             this.label_SBR_version.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
             this.label_SBR_version.ForeColor = System.Drawing.Color.DarkGray;
-            this.label_SBR_version.Location = new System.Drawing.Point(509, 592);
+            this.label_SBR_version.Location = new System.Drawing.Point(519, 595);
             this.label_SBR_version.Name = "label_SBR_version";
             this.label_SBR_version.Size = new System.Drawing.Size(165, 17);
             this.label_SBR_version.TabIndex = 42;
-            this.label_SBR_version.Text = "工具版本：Build.2024.08.26";
+            this.label_SBR_version.Text = "工具版本：Build.2024.08.27";
             this.label_SBR_version.Click += new System.EventHandler(this.label_Click);
             this.label_SBR_version.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             // 
@@ -332,9 +332,9 @@
             this.label_SBR_list_F12_Info.ForeColor = System.Drawing.Color.White;
             this.label_SBR_list_F12_Info.Location = new System.Drawing.Point(216, 409);
             this.label_SBR_list_F12_Info.Name = "label_SBR_list_F12_Info";
-            this.label_SBR_list_F12_Info.Size = new System.Drawing.Size(69, 19);
+            this.label_SBR_list_F12_Info.Size = new System.Drawing.Size(136, 19);
             this.label_SBR_list_F12_Info.TabIndex = 19;
-            this.label_SBR_list_F12_Info.Text = "还原存档";
+            this.label_SBR_list_F12_Info.Text = "还原存档/存档管理";
             // 
             // button_SBR_switch_F11
             // 
@@ -417,7 +417,7 @@
             this.label_SBR_Default_info.Name = "label_SBR_Default_info";
             this.label_SBR_Default_info.Size = new System.Drawing.Size(400, 25);
             this.label_SBR_Default_info.TabIndex = 47;
-            this.label_SBR_Default_info.Text = "          工具配置文件缺失或错误，请选择存档路径";
+            this.label_SBR_Default_info.Text = "        游戏存档路径或配置文件异常，请点击“选择路径”";
             this.label_SBR_Default_info.Visible = false;
             // 
             // button_SBR_Default_SavePath
@@ -483,7 +483,7 @@
             // 
             this.pictureBox_WuKong_Monkey.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_WuKong_Monkey.Image = global::WuKong_Saved_Backup_Recover.Properties.Resources.wukong_monkey;
-            this.pictureBox_WuKong_Monkey.Location = new System.Drawing.Point(420, 60);
+            this.pictureBox_WuKong_Monkey.Location = new System.Drawing.Point(430, 60);
             this.pictureBox_WuKong_Monkey.Name = "pictureBox_WuKong_Monkey";
             this.pictureBox_WuKong_Monkey.Size = new System.Drawing.Size(325, 368);
             this.pictureBox_WuKong_Monkey.TabIndex = 1;

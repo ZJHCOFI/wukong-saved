@@ -13,20 +13,25 @@ namespace WuKong_Saved_Backup_Recover
     public partial class Main : Form
     {
         // 编写时间：2024.08.25
-        // 更新时间：2024.08.26 21:00
+        // 更新时间：2024.08.27 18:00
         // Edit by ZJHCOFI
         // 博客Blog：https://zjhcofi.com
         // Github：https://github.com/zjhcofi
         // 功能：《黑神话：悟空》存档快速备份及还原工具
         // 外置插件：MouseKeyHook 5.6.0（下载方法：“Visual Studio”-“项目”-“管理NuGet程序包”）
         // 开源协议：BSD 3-Clause “New” or “Revised” License (https://choosealicense.com/licenses/bsd-3-clause/)
-        // 后续更新或漏洞修补通告页面：https://github.com/zjhcofi
+        // 后续更新或漏洞修补通告页面：https://github.com/zjhcofi/wukong-saved
         // =====更新日志=====
         // 2024.08.25 10:00
-        // 第一个版本发布
+        // 1、第一个版本发布
         // 2024.08.26 21:00
         // 1、优化了界面
-        // 2、新增了删除存档备份的功能
+        // 2、新增了<删除>存档备份的功能
+        // 3、修复了一个致命漏洞
+        // 2024.08.27 18:00
+        // 1、优化了判断逻辑
+        // 2、新增了<重命名>存档备份的功能
+        // 3、新增了存档(重)命名时去除非法字符的功能
         // ==================
 
         public Main()
@@ -39,6 +44,7 @@ namespace WuKong_Saved_Backup_Recover
         {
             public static string str_GlobalSavedPath;
             public static string[] str_GlobalUserName;
+            public static string str_ChooseSavedPath;
         }
 
         //窗体移动相关的变量声明及赋值
@@ -47,6 +53,9 @@ namespace WuKong_Saved_Backup_Recover
 
         //判断变量声明
         private bool bool_ConfigStatus = false; //配置文件或游戏存档路径状态
+
+        //版本日期声明
+        private string str_SoftwareVersion = "2024.08.27";
 
         //键盘监听变量声明
         private IKeyboardMouseEvents m_GlobalHook;
@@ -610,7 +619,7 @@ namespace WuKong_Saved_Backup_Recover
                         button_SBR_switch_F12.Text = "应用";
                     }
                     button_SBR_Default_SavePath.Text = "选择路径";
-                    label_SBR_Default_info.Text = "          工具配置文件缺失或错误，请选择存档路径";
+                    label_SBR_Default_info.Text = "        游戏存档路径或配置文件异常，请点击“选择路径”";
                     label_SBR_Default_SavePath.Text = "游戏存档路径：";
                     label_SBR_Default_SaveUser.Text = "需要备份或还原存档的用户（请勾选）：";
                     linkLabel_SBR_Default_SavePath.Text = "点击此处查看游戏存档路径说明";
@@ -630,10 +639,10 @@ namespace WuKong_Saved_Backup_Recover
                     label_SBR_list_KuaiJieJian.Text = "快捷键";
                     label_SBR_list_GongNengLieBiao.Text = "功能列表";
                     label_SBR_list_F11_Info.Text = "备份存档";
-                    label_SBR_list_F12_Info.Text = "还原存档";
+                    label_SBR_list_F12_Info.Text = "还原存档/存档管理";
                     //工具信息文字变化
                     label_SBR_creditor.Text = "作者：ZJHCOFI | zjhcofi.com";
-                    label_SBR_version.Text = "工具版本：Build.2024.08.26";
+                    label_SBR_version.Text = "工具版本：Build." + str_SoftwareVersion;
                     break;
                 case "繁體":
                     //控件变化
@@ -657,7 +666,7 @@ namespace WuKong_Saved_Backup_Recover
                         button_SBR_switch_F12.Text = "應用";
                     }
                     button_SBR_Default_SavePath.Text = "選擇路徑";
-                    label_SBR_Default_info.Text = "          工具配置文件缺失或錯誤，請選擇存檔路徑";
+                    label_SBR_Default_info.Text = "        遊戲存檔路徑或配置文件異常，請點擊“選擇路徑”";
                     label_SBR_Default_SavePath.Text = "遊戲存檔路徑：";
                     label_SBR_Default_SaveUser.Text = "需要備份或還原存檔的用戶（請勾選）：";
                     linkLabel_SBR_Default_SavePath.Text = "點擊此處查看遊戲存檔路徑說明";
@@ -677,10 +686,10 @@ namespace WuKong_Saved_Backup_Recover
                     label_SBR_list_KuaiJieJian.Text = "快捷鍵";
                     label_SBR_list_GongNengLieBiao.Text = "功能列表";
                     label_SBR_list_F11_Info.Text = "備份存檔";
-                    label_SBR_list_F12_Info.Text = "還原存檔";
+                    label_SBR_list_F12_Info.Text = "還原存檔/存檔管理";
                     //工具信息文字变化
                     label_SBR_creditor.Text = "作者：ZJHCOFI | zjhcofi.com";
-                    label_SBR_version.Text = "軟體版本：Build.2024.08.26";
+                    label_SBR_version.Text = "軟體版本：Build." + str_SoftwareVersion;
                     break;
                 case "English":
                     //控件变化
@@ -704,7 +713,7 @@ namespace WuKong_Saved_Backup_Recover
                         button_SBR_switch_F12.Text = "APPLY";
                     }
                     button_SBR_Default_SavePath.Text = "Choose Path";
-                    label_SBR_Default_info.Text = "      Missing or incorrect tool configuration file, please \"Choose Path\"";
+                    label_SBR_Default_info.Text = "   Game save path or configuration file exception, please \"Choose Path\"";
                     label_SBR_Default_SavePath.Text = "Game save path:";
                     label_SBR_Default_SaveUser.Text = "Please select the user who needs to backup or recover the saved:";
                     linkLabel_SBR_Default_SavePath.Text = "Game save path explanation";
@@ -717,24 +726,24 @@ namespace WuKong_Saved_Backup_Recover
                     label_info_SBR.Font = new Font("微软雅黑", 20F, FontStyle.Bold, GraphicsUnit.Point);
                     label_info_SBR.Text = "About Software";
                     label_SBR_title_GameName.Text = " BLACK MYTH WUKONG";
-                    label_SBR_title_SBRName.Text = "Saved Backup And Recover Tool";
+                    label_SBR_title_SBRName.Text = "Saved Backup and Recover Tool";
                     pictureBox_WuKong_HeiShenHua.Visible = false;
                     pictureBox_WuKong_Text.Image = Resources.wukong_title_en;
                     //工具功能文字变化
                     label_SBR_list_KuaiJieJian.Text = "Hotkeys";
                     label_SBR_list_GongNengLieBiao.Text = "Options";
                     label_SBR_list_F11_Info.Text = "Saved Backup";
-                    label_SBR_list_F12_Info.Text = "Saved Recover";
+                    label_SBR_list_F12_Info.Text = "Saved Recover and Management";
                     //工具信息文字变化
                     label_SBR_creditor.Text = "Credit: ZJHCOFI | zjhcofi.com";
-                    label_SBR_version.Text = "Software Version: Build.2024.08.26";
+                    label_SBR_version.Text = "Software Version: Build." + str_SoftwareVersion;
                     break;
                 default:
                     break;
             }
         }
 
-        //事件：点击“游戏路径说明”
+        //事件：点击“游戏存档路径说明”
         private void linkLabel_SBR_Default_SavePath_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SavedPath_Explanation savedPath_Explanation = new SavedPath_Explanation();

@@ -117,26 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox_about.Text" xml:space="preserve">
-    <value>●功能：可对《黑神话:悟空》的游戏存档进行快速备份或还原操作，方便回档达成某些成就、重新打怪、获得错过的物品、拍摄游戏风景照片等
-1、支持在游戏时进行备份操作，可备份多个存档，不限数量
-2、备份时，备份的是游戏当前进度的【最后一次上香】或【游戏最后一次自动保存时】的存档
-3、还原前，请将游戏【退出至标题页面】。还原时，还原的是【所选存档】里【最后一次上香】或【游戏最后一次自动保存时】的进度
-Function: Quickly backup or recover game save of "Black Myth Wukong".
-=====================
-●程序作者(Credit): ZJHCOFI
-●开源地址(Open source): https://github.com/zjhcofi/wukong-saved
-●作者博客(Creditor's Blog): https://zjhcofi.com
-●开源协议(License): BSD 3-Clause “New” or “Revised” License (https://choosealicense.com/licenses/bsd-3-clause)
-=====================
-●参考内容及素材来源(Reference content and material sources)：
-1.《黑神话：悟空》官网(Black Myth Wukong): https://heishenhua.com
-2. iconfont-阿里巴巴矢量图标库: https://www.iconfont.cn
-=====================
-●特别鸣谢(Special Thanks)：
-cnlnn: https://github.com/cnlnn
-Unica: https://github.com/unica-nya</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -1,6 +1,6 @@
 ﻿namespace WuKong_Saved_Backup_Recover
 {
-    partial class Saved_Backup
+    partial class Saved_RecoverRename
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saved_Backup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saved_RecoverRename));
             this.label_title = new System.Windows.Forms.Label();
             this.textBox_keyword = new System.Windows.Forms.TextBox();
             this.label_info_SavedKeyword = new System.Windows.Forms.Label();
             this.button_ok = new System.Windows.Forms.Button();
             this.label_info_SavedName = new System.Windows.Forms.Label();
             this.label_SavedName = new System.Windows.Forms.Label();
-            this.label_info_User = new System.Windows.Forms.Label();
-            this.label_User = new System.Windows.Forms.Label();
             this.groupBox_SavedBackup = new System.Windows.Forms.GroupBox();
-            this.label_Explanation = new System.Windows.Forms.Label();
             this.label_illegal = new System.Windows.Forms.Label();
             this.groupBox_SavedBackup.SuspendLayout();
             this.SuspendLayout();
@@ -47,12 +44,12 @@
             // 
             this.label_title.AutoSize = true;
             this.label_title.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_title.Location = new System.Drawing.Point(53, 16);
+            this.label_title.Location = new System.Drawing.Point(60, 16);
             this.label_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(289, 27);
+            this.label_title.Size = new System.Drawing.Size(278, 27);
             this.label_title.TabIndex = 2;
-            this.label_title.Text = "存档快速备份(Saved Backup)";
+            this.label_title.Text = "存档重命名(Saved Rename)";
             // 
             // textBox_keyword
             // 
@@ -76,7 +73,7 @@
             // button_ok
             // 
             this.button_ok.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_ok.Location = new System.Drawing.Point(136, 362);
+            this.button_ok.Location = new System.Drawing.Point(136, 249);
             this.button_ok.Name = "button_ok";
             this.button_ok.Size = new System.Drawing.Size(132, 32);
             this.button_ok.TabIndex = 1;
@@ -103,69 +100,37 @@
             this.label_SavedName.TabIndex = 7;
             this.label_SavedName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label_info_User
-            // 
-            this.label_info_User.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold);
-            this.label_info_User.Location = new System.Drawing.Point(6, 125);
-            this.label_info_User.Name = "label_info_User";
-            this.label_info_User.Size = new System.Drawing.Size(126, 43);
-            this.label_info_User.TabIndex = 8;
-            this.label_info_User.Text = "涉及用户：\r\nUsers:";
-            this.label_info_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_User
-            // 
-            this.label_User.Font = new System.Drawing.Font("微软雅黑", 8F);
-            this.label_User.Location = new System.Drawing.Point(134, 125);
-            this.label_User.Name = "label_User";
-            this.label_User.Size = new System.Drawing.Size(209, 43);
-            this.label_User.TabIndex = 9;
-            this.label_User.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // groupBox_SavedBackup
             // 
             this.groupBox_SavedBackup.Controls.Add(this.label_info_SavedName);
-            this.groupBox_SavedBackup.Controls.Add(this.label_User);
             this.groupBox_SavedBackup.Controls.Add(this.label_info_SavedKeyword);
-            this.groupBox_SavedBackup.Controls.Add(this.label_info_User);
             this.groupBox_SavedBackup.Controls.Add(this.textBox_keyword);
             this.groupBox_SavedBackup.Controls.Add(this.label_SavedName);
             this.groupBox_SavedBackup.Controls.Add(this.label_illegal);
-            this.groupBox_SavedBackup.Location = new System.Drawing.Point(21, 105);
+            this.groupBox_SavedBackup.Location = new System.Drawing.Point(21, 46);
             this.groupBox_SavedBackup.Name = "groupBox_SavedBackup";
-            this.groupBox_SavedBackup.Size = new System.Drawing.Size(360, 239);
+            this.groupBox_SavedBackup.Size = new System.Drawing.Size(360, 186);
             this.groupBox_SavedBackup.TabIndex = 10;
             this.groupBox_SavedBackup.TabStop = false;
-            // 
-            // label_Explanation
-            // 
-            this.label_Explanation.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.label_Explanation.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_Explanation.Location = new System.Drawing.Point(40, 53);
-            this.label_Explanation.Name = "label_Explanation";
-            this.label_Explanation.Size = new System.Drawing.Size(319, 61);
-            this.label_Explanation.TabIndex = 13;
-            this.label_Explanation.Text = "存档备份说明：支持在游戏时进行备份操作，可备份多个存档；备份的是游戏当前进度的【最后一次上香】或【游戏最后一次自动保存】时的存档";
             // 
             // label_illegal
             // 
             this.label_illegal.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.label_illegal.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_illegal.Location = new System.Drawing.Point(8, 170);
+            this.label_illegal.Location = new System.Drawing.Point(7, 119);
             this.label_illegal.Name = "label_illegal";
             this.label_illegal.Size = new System.Drawing.Size(343, 59);
-            this.label_illegal.TabIndex = 14;
+            this.label_illegal.TabIndex = 13;
             this.label_illegal.Text = "注意：存档名称已自动去除非法字符\r\nAttention: The save name has automatically removed illegal char" +
     "acters";
             this.label_illegal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Saved_Backup
+            // Saved_RecoverRename
             // 
             this.AcceptButton = this.button_ok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 413);
-            this.Controls.Add(this.label_Explanation);
+            this.ClientSize = new System.Drawing.Size(404, 305);
             this.Controls.Add(this.groupBox_SavedBackup);
             this.Controls.Add(this.button_ok);
             this.Controls.Add(this.label_title);
@@ -174,10 +139,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "Saved_Backup";
+            this.Name = "Saved_RecoverRename";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "存档快速备份(Saved Backup)";
-            this.Load += new System.EventHandler(this.Saved_Backup_Load);
+            this.Text = "存档重命名(Saved Rename)";
+            this.Load += new System.EventHandler(this.Saved_RecoverRename_Load);
             this.groupBox_SavedBackup.ResumeLayout(false);
             this.groupBox_SavedBackup.PerformLayout();
             this.ResumeLayout(false);
@@ -193,10 +158,7 @@
         private System.Windows.Forms.Button button_ok;
         private System.Windows.Forms.Label label_info_SavedName;
         private System.Windows.Forms.Label label_SavedName;
-        private System.Windows.Forms.Label label_info_User;
-        private System.Windows.Forms.Label label_User;
         private System.Windows.Forms.GroupBox groupBox_SavedBackup;
-        private System.Windows.Forms.Label label_Explanation;
         private System.Windows.Forms.Label label_illegal;
     }
 }

@@ -12,10 +12,28 @@ namespace WuKong_Saved_Backup_Recover
             InitializeComponent();
         }
 
+        //方法：去除非法字符
+        private string ReplaceIllegalChar(string fileName)
+        {
+            string str = fileName;
+            str = str.Replace("\\", string.Empty);
+            str = str.Replace("/", string.Empty);
+            str = str.Replace(":", string.Empty);
+            str = str.Replace("*", string.Empty);
+            str = str.Replace("?", string.Empty);
+            str = str.Replace("\"", string.Empty);
+            str = str.Replace("<", string.Empty);
+            str = str.Replace(">", string.Empty);
+            str = str.Replace("|", string.Empty);
+            str = str.Replace(" ", string.Empty);
+            return str;
+        }
+
         //事件：窗体加载
         private void Saved_Backup_Load(object sender, EventArgs e)
         {
-            label_SavedName.Text = textBox_keyword.Text.ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+            string str_LegalName = ReplaceIllegalChar(textBox_keyword.Text.ToString());
+            label_SavedName.Text = str_LegalName + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
             for (int i = 0; i < GlobalValue.str_GlobalUserName.Length; i++)
             {
                 label_User.Text += GlobalValue.str_GlobalUserName[i] + "，";
@@ -62,7 +80,8 @@ namespace WuKong_Saved_Backup_Recover
         //事件：点击“确认”按钮
         private void button_ok_Click(object sender, EventArgs e)
         {
-            label_SavedName.Text = textBox_keyword.Text.ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+            string str_LegalName = ReplaceIllegalChar(textBox_keyword.Text.ToString());
+            label_SavedName.Text = str_LegalName + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
             string str_GameSavedPath = Path.Combine(GlobalValue.str_GlobalSavedPath, "SaveGames");
             string str_SBRSavedPath = Path.Combine(GlobalValue.str_GlobalSavedPath, "SBR_SaveGamesBackup");
             for (int i = 0; i < GlobalValue.str_GlobalUserName.Length; i++)
@@ -78,7 +97,8 @@ namespace WuKong_Saved_Backup_Recover
         //事件：textBox文字变化
         private void textBox_keyword_TextChanged(object sender, EventArgs e)
         {
-            label_SavedName.Text = textBox_keyword.Text.ToString() + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+            string str_LegalName = ReplaceIllegalChar(textBox_keyword.Text.ToString());
+            label_SavedName.Text = str_LegalName + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
         }
     }
 }
